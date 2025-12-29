@@ -7,6 +7,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class GameRunner {
 
+    //this autowired annotation is injecting Game dependency , this is called field injection usually constructor injection is recommended
     @Autowired
     private Game game;
 
