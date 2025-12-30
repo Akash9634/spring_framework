@@ -1,9 +1,7 @@
 package com.in28minutes.spring.learn_spring_framework;
 
-import com.in28minutes.spring.learn_spring_framework.game.Game;
+import com.in28minutes.spring.learn_spring_framework.enterprise.controller.MyWebController;
 import com.in28minutes.spring.learn_spring_framework.game.GameRunner;
-import com.in28minutes.spring.learn_spring_framework.game.MarioGame;
-import com.in28minutes.spring.learn_spring_framework.game.SuperContra;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
@@ -20,6 +18,8 @@ public class LearnSpringFrameworkApplication {
 		//fetch the bean of game runner class name it runner
 		GameRunner runner = context.getBean(GameRunner.class);
 
+		MyWebController controller = context.getBean(MyWebController.class);
+		System.out.println(controller.returnValueFromBusinessService());
 		runner.run();
 	}
 

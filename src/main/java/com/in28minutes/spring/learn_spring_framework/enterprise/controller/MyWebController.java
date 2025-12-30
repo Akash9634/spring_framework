@@ -1,0 +1,15 @@
+package com.in28minutes.spring.learn_spring_framework.enterprise.controller;
+
+import com.in28minutes.spring.learn_spring_framework.enterprise.businessService.BusinessService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component
+public class MyWebController {
+    @Autowired
+    private BusinessService businessService;
+
+    public long returnValueFromBusinessService() {
+        return businessService.calculateSum();
+    }
+}
